@@ -12,6 +12,24 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"></a>
+            <form class="form-inline my-2 my-lg-0" id="sign-in">
+            <fieldset>
+            <input class="form-control" name="credentials[email]" type='email' placeholder="Email">
+            <input class="form-control" name="credentials[password]" type='password' placeholder="Password">
+            <button class="btn btn-primary my-2 my-sm-0" type="submit">Sign-In</button>
+            </fieldset>
+            </form>
+            <form class='form-inline my-2 my-lg-0' id='sign-up'>
+              <fieldset>
+              <input name="credentials[email]" type="email" placeholder="Email">
+              <input name="credentials[password]" type="password" placeholder="Password">
+              <input name="credentials[password_confirmation]" type="password" placeholder="Confirm Password">
+              <input type="submit" value="Sign-Up!">
+            </fieldset>
+            </form>
+            </nav>
+            <h1>Tell Me a Joke</h1>
     </body>
 </html>
