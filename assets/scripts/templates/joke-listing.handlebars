@@ -1,0 +1,12 @@
+{{#each jokes as |joke|}}
+  {{log book}} 
+  <section data-id="{{joke.id}}">
+    <h6>Question:</h6>
+        {{joke.question}}
+    <h6>Punchline:</h6>
+        {{joke.punch_line}}
+    {{> partial}} 
+    
+  </section>
+
+{{/each}}

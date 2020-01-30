@@ -10,6 +10,13 @@ const onCreateJoke = function () {
       .then(jokesUi.createJokeSuccess)
       .catch(jokesUi.createJokeFailure)
   }
+
+  const onGetJokes = (event) => {
+    event.preventDefault()
+    jokesApi.getJokes()
+      .then(jokesUi.getBooksSuccess)
+      .catch(jokesUi.failure)
+  }
   const addHandlers = () => {
     $('#create-joke').on('submit', onCreateJoke)
   }

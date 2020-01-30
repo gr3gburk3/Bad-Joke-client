@@ -46,6 +46,7 @@ const changePasswordSuccess = () => {
     $('#change-password').hide()
     $('#logout').hide()
     $('#message').delay(1000).hide('User Logged Out')
+    $('#create-joke').hide()
   }
   const logoutFailure = () => {
     $('#message').show().text('Unsuccessful Log-Out')

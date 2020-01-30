@@ -12,6 +12,14 @@ const createJoke = function (data) {
     })
   }
 
+const getJokes = function () {
+  return $.ajax({
+    url: config.apiUrl + '/jokes',
+    method: 'GET',
+  })
+}
+
 module.exports = {
-    createJoke
+    createJoke,
+    getJokes
 }
