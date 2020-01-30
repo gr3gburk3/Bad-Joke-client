@@ -14,13 +14,14 @@ const signUpFailure = () => {
 
 const signInSuccess = (response) => {
     store.user = response.user
-    $('#message').show().text('Knock, Knock...')
+    $('#message').show().text('Not all bad jokes are dad jokes, but all Dad jokes are bad jokes - Socrates')
     $('#sign-up').hide()
+    $('#create-joke').show()
     $('form').trigger('reset')
     $('#sign-in').hide()
     $('#change-password').show()
     $('#logout').show()
-    $('#message').delay(1000).hide('Knock, Knock...')
+    $('#message').delay(2000).hide('Not all bad jokes are dad jokes, but all Dad jokes are bad jokes - Socrates')
 }
 
 const signInFailure = () => {
