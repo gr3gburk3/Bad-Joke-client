@@ -19,7 +19,32 @@ const getJokes = function () {
   })
 }
 
+const removeJoke = function (id) {
+    return $.ajax({
+      url: config.apiUrl + '/jokes/' + id,
+      method: 'DELETE',
+      headers: {
+        Authorization: 'Token token=' + store.user.token
+      },
+    })
+  }
+
+const updateJoke = function (data, id) {
+    return $.ajax({
+      url: config.apiUrl + '/jokes/' + id,
+      method: 'PATCH',
+      headers: {
+        Authorization: 'Token token=' + store.user.token
+      },
+      data: data
+    })
+  
+  }
+
+
 module.exports = {
     createJoke,
-    getJokes
+    getJokes,
+    updateJoke,
+    removeJoke
 }
