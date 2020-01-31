@@ -15,10 +15,9 @@ const createJokeFailure = () => {
     console.log(data)
     const showJokesHtml = showJokesTemplate({ jokes: data.jokes })
     $('.content').html(showJokesHtml)
+    $('#clear').show()
   }
-  const clearJokes = () => {
-    $('.content').empty()
-  }
+ 
   
   const failure = (error) => {
     console.error(error)
@@ -27,7 +26,5 @@ module.exports = {
     createJokeSuccess,
     createJokeFailure,
     getJokesSuccess,
-    clearJokes,
     failure
-
 }

@@ -11,4 +11,5 @@ $(() => {
   $('#logout').hide()
   $('#create-joke').hide()
   $('#show-jokes').hide()
+  $('#clear').hide()
 })

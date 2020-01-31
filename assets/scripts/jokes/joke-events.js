@@ -3,7 +3,6 @@ const getFormFields = require('./../../../lib/get-form-fields')
 const jokesUi = require('./jokes-ui')
 
 const onCreateJoke = function () {
-    console.log('Im in onCreateJoke')
     event.preventDefault()
     const data = getFormFields(event.target)
     jokesApi.createJoke(data)
@@ -23,21 +22,25 @@ const onCreateJoke = function () {
     const form = event.target
     const data = getFormFields(form)
     const id = $(event.target).data('id')
-    console.log(id)
     jokesApi.updateJoke(data, id)
   }
 
   const onRemoveJoke = (event) => {
-      console.log('test')
     event.preventDefault()
     const id = $(event.target).data('id')
     jokesApi.removeJoke(id)
       .then(() => onGetJokes(event))
       .catch(jokesUi.failure)
   }
+
+  const onClearJokes = (event) => {
+    event.preventDefault()
+    $('.content').html('')
+  }
   const addHandlers = () => {
     $('#create-joke').on('submit', onCreateJoke)
     $('#show-jokes').on('submit', onGetJokes)
+    $('#clear').on('click', onClearJokes)
     $('#content').on('click', '#remove', onRemoveJoke)
     $('#content').on('submit', '#update', onUpdateJoke)
   }
