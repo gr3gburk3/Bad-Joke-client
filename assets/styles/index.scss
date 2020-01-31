@@ -13,4 +13,40 @@
     padding-right: 600px;
 }
 
+.app-name {
+    text-align: center;
+    padding: 50px;
+    font-size: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#show-jokes {
+   padding-top: 20px;
+}
+
+section {
+    @include make-col-ready;
+    @include media-breakpoint-up(md) {
+      @include make-col(6);
+    }
+    @include media-breakpoint-up(lg) {
+      @include make-col(4);
+    }
+    background: $white;
+    border: 2px solid;
+    cursor: pointer;
+    margin: -1px;
+    outline: none;
+    padding: 1rem;
+
+    p {
+      margin-bottom: 0;
+    }
+
+  }
+
 

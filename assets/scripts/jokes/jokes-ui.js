@@ -1,4 +1,5 @@
 // const store = require ('./../store.js')
+const showJokesTemplate = require('../templates/joke-listing.handlebars')
 
 const createJokeSuccess = () => {
     $('#display').show().text('Joke Created!')
@@ -10,7 +11,14 @@ const createJokeFailure = () => {
     $('form').trigger('reset')
   }
 
+  const getJokesSuccess = (data) => {
+      debugger
+    console.log(data)
+    const showJokesHtml = showJokesTemplate({ jokes: data.jokes })
+    $('.content').html(showJokesHtml)
+  }
 module.exports = {
     createJokeSuccess,
-    createJokeFailure
+    createJokeFailure,
+    getJokesSuccess
 }

@@ -14,11 +14,12 @@ const onCreateJoke = function () {
   const onGetJokes = (event) => {
     event.preventDefault()
     jokesApi.getJokes()
-      .then(jokesUi.getBooksSuccess)
+      .then(jokesUi.getJokesSuccess)
       .catch(jokesUi.failure)
   }
   const addHandlers = () => {
     $('#create-joke').on('submit', onCreateJoke)
+    $('#show-jokes').on('submit', onGetJokes)
   }
   module.exports = {
       addHandlers
