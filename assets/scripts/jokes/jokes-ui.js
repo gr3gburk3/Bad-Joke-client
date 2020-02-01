@@ -14,7 +14,7 @@ const createJokeFailure = () => {
   const getJokesSuccess = (data) => {
     console.log(data)
     const showJokesHtml = showJokesTemplate({ jokes: data.jokes })
-    $('.content').html(showJokesHtml)
+    $('.content').show().html(showJokesHtml)
     $('#clear').show()
   }
  
