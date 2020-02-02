@@ -17,6 +17,10 @@ const createJokeFailure = () => {
     $('.content').show().html(showJokesHtml)
     $('#clear').show()
   }
+  const updateJokeSuccess = () => {
+      console.log('test')
+    $('form').trigger('reset')
+  }
  
   
   const failure = (error) => {
@@ -26,5 +30,7 @@ module.exports = {
     createJokeSuccess,
     createJokeFailure,
     getJokesSuccess,
-    failure
+    failure,
+    updateJokeSuccess
+
 }

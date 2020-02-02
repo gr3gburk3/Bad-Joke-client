@@ -1,7 +1,7 @@
 {{#each jokes as |joke|}}
   {{log joke}} 
   <section data-id="{{joke.id}}">
-     
+     <div>
     <h6>Question:</h6>
         {{joke.question}}
     <h6>Punchline:</h6>
@@ -10,6 +10,7 @@
      <button class='btn btn-danger remove' data-id="{{joke.id}}">Remove Joke</button>
      </form>
      <hr>
+     </div>
      {{> partial}} 
     
   </section>

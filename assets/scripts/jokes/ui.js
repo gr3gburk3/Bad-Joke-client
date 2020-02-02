@@ -14,7 +14,7 @@ const signUpFailure = () => {
 
 const signInSuccess = (response) => {
     store.user = response.user
-    $('#message').show().text('Not all bad jokes are dad jokes, but all Dad jokes are bad jokes - Socrates')
+    $('#message').show().text('Welcome!')
     $('#show-jokes').show()
     $('#sign-up').hide()
     $('#create-joke').show()
@@ -22,7 +22,7 @@ const signInSuccess = (response) => {
     $('#sign-in').hide()
     $('#change-password').show()
     $('#logout').show()
-   // $('#message').delay(2000).hide('Not all bad jokes are dad jokes, but all Dad jokes are bad jokes - Socrates')
+    $('#message').delay(2000).hide('Welcome!')
 }
 
 const signInFailure = () => {

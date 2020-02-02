@@ -23,6 +23,7 @@ const onCreateJoke = function () {
     const data = getFormFields(form)
     const id = $(event.target).data('id')
     jokesApi.updateJoke(data, id)
+        .then(jokesUi.updateJokeSuccess)
   }
 
   const onRemoveJoke = (event) => {
@@ -43,6 +44,7 @@ const onCreateJoke = function () {
     $('#clear').on('click', onClearJokes)
     $('#content').on('click', '#remove', onRemoveJoke)
     $('#content').on('submit', '#update', onUpdateJoke)
+    $('#update').on('click', onUpdateJoke)
   }
   module.exports = {
       addHandlers
