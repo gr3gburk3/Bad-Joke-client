@@ -38,6 +38,6 @@ While building this application, I stuck very closely to the suggested schedule 
 
 ## Images
 
-*[Wireframe](https://imgur.com/gTFHjU1)
+[Wireframe](https://imgur.com/gTFHjU1)
 
 
