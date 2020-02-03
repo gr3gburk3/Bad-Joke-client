@@ -1,7 +1,6 @@
 const store = require ('./../store.js')
 
 const signUpSuccess = (response) => {
-    console.log('hello')
     $('form').trigger('reset')
     $('#message').show().text('Account Created!!')
     $('#message').delay(1000).hide('Account Created!!')
