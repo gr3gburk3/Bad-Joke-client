@@ -5,9 +5,9 @@ This application is designed for a user to create an account, granting them acce
 
 ### Important Links
 
--[Deployed Site](https://gr3gburk3.github.io/Bad-Joke-client/)
--[Deployed API](https://rocky-spire-56088.herokuapp.com/jokes)
--[Other Repo](https://github.com/gr3gburk3/Bad-Joke-API)
+*[Deployed Site](https://gr3gburk3.github.io/Bad-Joke-client/)
+*[Deployed API](https://rocky-spire-56088.herokuapp.com/jokes)
+*[Other Repo](https://github.com/gr3gburk3/Bad-Joke-API)
 
 ### Planning Story
 
@@ -15,29 +15,29 @@ While building this application, I stuck very closely to the suggested schedule 
 
 ### User Stories
 
--As a user, I want to be able to sign-up/sign-in.
--As a user, I want to be able to see all jokes.
--As a user, I want to be able to create a joke.
--As a user, I want to be able to update a joke.
--As a user, I want to be able to delete a joke.
+*As a user, I want to be able to sign-up/sign-in.
+*As a user, I want to be able to see all jokes.
+*As a user, I want to be able to create a joke.
+*As a user, I want to be able to update a joke.
+*As a user, I want to be able to delete a joke.
 
 ### Technologies Used
 
--HTML
--CSS
--Bootstrap
--Handlebars
--jQuery
--Javascript
+*HTML
+*CSS
+*Bootstrap
+*Handlebars
+*jQuery
+*Javascript
 
 ### Unsolved Problems
 
--I would like to only display the punchline on a click event.
--I would like to add a joke of the day that displays automatically before showing other jokes.
--I would like to continue styling.
+*I would like to only display the punchline on a click event.
+*I would like to add a joke of the day that displays automatically before showing other jokes.
+*I would like to continue styling.
 
 ## Images
 
-![Wireframe](https://imgur.com/gTFHjU1)
+*[Wireframe](https://imgur.com/gTFHjU1)
 
 
