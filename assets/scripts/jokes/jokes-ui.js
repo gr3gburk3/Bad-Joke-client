@@ -20,6 +20,8 @@ const createJokeFailure = () => {
   const updateJokeSuccess = () => {
       console.log('test')
     $('form').trigger('reset')
+    $('#update-notice').show().text('Joke Updated. Click Show Jokes to view change.')
+    $('#update-notice').delay(1500).hide('Joke Updated. Click Show Jokes to view change.')
   }
  
   

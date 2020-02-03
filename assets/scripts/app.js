@@ -12,4 +12,5 @@ $(() => {
   $('#create-joke').hide()
   $('#show-jokes').hide()
   $('#clear').hide()
+  $('#update-notice').show()
 })

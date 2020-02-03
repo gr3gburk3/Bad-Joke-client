@@ -44,7 +44,6 @@ const onCreateJoke = function () {
     $('#clear').on('click', onClearJokes)
     $('#content').on('click', '.remove', onRemoveJoke)
     $('#content').on('submit', '#update', onUpdateJoke)
-    //$('#update').on('click', onUpdateJoke)
   }
   module.exports = {
       addHandlers
