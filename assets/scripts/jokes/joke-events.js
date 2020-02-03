@@ -42,9 +42,9 @@ const onCreateJoke = function () {
     $('#create-joke').on('submit', onCreateJoke)
     $('#show-jokes').on('submit', onGetJokes)
     $('#clear').on('click', onClearJokes)
-    $('#content').on('click', '#remove', onRemoveJoke)
+    $('#content').on('click', '.remove', onRemoveJoke)
     $('#content').on('submit', '#update', onUpdateJoke)
-    $('#update').on('click', onUpdateJoke)
+    //$('#update').on('click', onUpdateJoke)
   }
   module.exports = {
       addHandlers

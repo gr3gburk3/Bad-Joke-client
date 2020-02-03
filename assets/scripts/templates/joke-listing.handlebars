@@ -1,16 +1,16 @@
 {{#each jokes as |joke|}}
   {{log joke}} 
   <section data-id="{{joke.id}}">
-     <div>
+     
     <h6>Question:</h6>
         {{joke.question}}
     <h6>Punchline:</h6>
         {{joke.punch_line}}
-     <form class="form-inline my-2 my-lg-0" id="remove">
-     <button class='btn btn-danger remove' data-id="{{joke.id}}">Remove Joke</button>
-     </form>
+    <form class="form-inline my-2 my-lg-0">
+    <button class='btn btn-primary remove' type='button' data-id="{{joke.id}}">Remove Joke</button>
+    </form>
      <hr>
-     </div>
+     
      {{> partial}} 
     
   </section>
