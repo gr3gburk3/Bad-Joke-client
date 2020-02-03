@@ -7,7 +7,7 @@ This application is designed for a user to create an account, granting them acce
 
 * [Deployed Site](https://gr3gburk3.github.io/Bad-Joke-client/)
 * [Deployed API](https://rocky-spire-56088.herokuapp.com/jokes)
-* [Other Repo](https://github.com/gr3gburk3/Bad-Joke-API)
+* [API Repo](https://github.com/gr3gburk3/Bad-Joke-API)
 
 ### Planning Story
 
