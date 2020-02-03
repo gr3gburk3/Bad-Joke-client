@@ -17,11 +17,28 @@ const createJokeFailure = () => {
     $('.content').show().html(showJokesHtml)
     $('#clear').show()
   }
-  const updateJokeSuccess = () => {
-      console.log('test')
+  const updateJokeSuccess = (event, id) => {
+      // a[data-item-id=stand-out]
+    $(`.update-notice[data-id=${id}]`).show().text('Joke Updated. Click Show Jokes to view change.')
+    $('.update-notice').delay(3000).hide('Joke Updated. Click Show Jokes to view change.')
     $('form').trigger('reset')
-    $('#update-notice').show().text('Joke Updated. Click Show Jokes to view change.')
-    $('#update-notice').delay(1500).hide('Joke Updated. Click Show Jokes to view change.')
+  }
+
+  const updateJokeFailure = (event, id) => {
+    $(`.update-notice[data-id=${id}]`).show().text('Update Failed. Check that joke belongs to user')
+    $('.update-notice').delay(3000).hide('Update Failed. Check that joke belongs to user')
+    $('form').trigger('reset')
+
+  }
+  const removeJokeSuccess = () => {
+      $('#display').show().text('Joke Deleted')
+      $('#display').delay(3000).hide('Joke Deleted')
+
+  }
+
+  const removeJokeFailure = (id) => {
+    $(`.update-notice[data-id=${id}]`).show().text('Could not remove joke')  
+    $('.update-notice').delay(3000).hide('Could not remove joke')
   }
  
   
@@ -33,6 +50,9 @@ module.exports = {
     createJokeFailure,
     getJokesSuccess,
     failure,
-    updateJokeSuccess
+    updateJokeSuccess,
+    updateJokeFailure, 
+    removeJokeSuccess,
+    removeJokeFailure
 
 }

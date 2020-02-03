@@ -23,15 +23,23 @@ const onCreateJoke = function () {
     const data = getFormFields(form)
     const id = $(event.target).data('id')
     jokesApi.updateJoke(data, id)
-        .then(jokesUi.updateJokeSuccess)
-  }
+        .then(() => {
+        jokesUi.updateJokeSuccess(event, id)
+  })
+        .catch(() => {
+            jokesUi.updateJokeFailure(event, id)
+  })
+}
 
   const onRemoveJoke = (event) => {
     event.preventDefault()
     const id = $(event.target).data('id')
     jokesApi.removeJoke(id)
       .then(() => onGetJokes(event))
-      .catch(jokesUi.failure)
+      .then(jokesUi.removeJokeSuccess)
+      .catch(() => {
+          jokesUi.removeJokeFailure(id)
+      })
   }
 
   const onClearJokes = (event) => {
@@ -43,7 +51,7 @@ const onCreateJoke = function () {
     $('#show-jokes').on('submit', onGetJokes)
     $('#clear').on('click', onClearJokes)
     $('#content').on('click', '.remove', onRemoveJoke)
-    $('#content').on('submit', '#update', onUpdateJoke)
+    $('#content').on('submit', '.update', onUpdateJoke)
   }
   module.exports = {
       addHandlers
