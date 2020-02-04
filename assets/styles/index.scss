@@ -21,7 +21,8 @@
 
 .buttons {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
 }
 
 #show-jokes {
@@ -53,9 +54,6 @@ section {
     @include make-row;
   }
 
- //#update-joke {
-    // margin-top: 20px;
- // }
 
  #clear {
    margin-left: 20px;
@@ -65,5 +63,12 @@ section {
    font-size: 24px;
  }
 
+ #question {
+   height: 70px;
+ }
+
+ #remove {
+   padding-top: 10px;
+ }
 
 
