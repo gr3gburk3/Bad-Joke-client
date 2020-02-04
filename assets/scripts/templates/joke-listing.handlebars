@@ -3,19 +3,28 @@
   <section data-id="{{joke.id}}">
      
     <h6>Question:</h6>
+    <div class ="question">
         {{joke.question}}
+        </div>
+        
     <h6>Punchline:</h6>
+    <div class="punchline">
         {{joke.punch_line}}
-       
+       </div>
      
     <form class="form-inline my-2 my-lg-0">
     <button class='btn btn-primary remove' type='button' data-id="{{joke.id}}">Remove Joke</button>
     </form>
     <p class="update-notice" data-id="{{joke.id}}"></p>
+    <button class = "speak">Say a message</button>
      <hr>
-     
-     {{> partial}} 
-     
+
+<form class="form-inline my-2 my-lg-0 update"  data-id="{{id}}">
+  <input name="joke[question]" type="text" placeholder="Question">
+  <input name="joke[punch_line]" type="text" placeholder="Punchline">
+  <button class="btn btn-primary update-joke"  type="submit">Update Joke</button>
+  
+  </form>
 
     
   </section>

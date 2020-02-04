@@ -3,7 +3,6 @@
 const jokeEvents = require('./jokes/joke-events.js')
 const events = require('./jokes/events.js')
 
-
 $(() => {
   events.addHandlers()
   jokeEvents.addHandlers()
