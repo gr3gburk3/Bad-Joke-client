@@ -1,12 +1,25 @@
 @import '~bootstrap/scss/bootstrap';
 
-#sign-in {
-    padding-right: 150px;
+body {
+  background-image: url('/public/open-mic.jpg'); //no-repeat center center fixed;
+  background-size: cover;
 }
+
+.top-nav {
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+#sign-in {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 300px;
+ }
 
 #message {
     text-align: center;
     padding: 50px;
+    color: white;
 }
 
 #change-password {
@@ -17,12 +30,14 @@
     text-align: center;
     padding: 50px;
     font-size: 20px;
+    color: white;
 }
 
 .buttons {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 10px;
 }
 
 #show-jokes {
@@ -38,9 +53,9 @@ section {
       @include make-col(4);
     }
     background: $white;
-    border: 2px solid;
+    border: 5px solid;
     cursor: pointer;
-    margin: -1px;
+    margin: -2px;
     outline: none;
     padding: 1rem;
 
@@ -70,5 +85,10 @@ section {
  #remove {
    padding-top: 10px;
  }
+
+ .forms {
+   padding-bottom: 10px;
+ }
+
 
 

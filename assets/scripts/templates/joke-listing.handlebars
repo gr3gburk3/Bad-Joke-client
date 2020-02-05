@@ -1,15 +1,16 @@
 {{#each jokes as |joke|}}
-  
+  {{log joke joke.editable}}
   <section data-id="{{joke.id}}">
     <div id="question">
     <h6>Question:</h6>
         {{joke.question}}
     </div>
-    <div id="punchline">
+    
     <h6>Punchline:</h6>
+    <div class="forms">
         {{joke.punch_line}}
     </div>
-    <br>
+  
     {{!#if joke.editable}}
     <form class="form-inline my-2 my-lg-0">
     <button class='btn btn-danger remove' type='button' data-id="{{joke.id}}">Remove Joke</button>
@@ -17,8 +18,10 @@
     <hr>
     <p class="update-notice" data-id="{{joke.id}}"></p>
     <form class="form-inline my-2 my-lg-0 update"  data-id="{{id}}">
+      <div class="forms">
   <input name="joke[question]" type="text" placeholder="Question">
   <input name="joke[punch_line]" type="text" placeholder="Punchline">
+      </div>
   <button class="btn btn-primary update-joke"  type="submit">Update Joke</button>
   </form>
   {{!/if}}

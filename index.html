@@ -12,14 +12,13 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#F86E53;">
-          <a class="navbar-brand" href="#">Dad Jokes</a>
+      <nav class="navbar navbar-expand-lg navbar-light top-nav" style="background-color:black">
         <a class="navbar-brand" href="#"></a>
             <form class="form-inline my-2 my-lg-0" id="sign-in">
             <fieldset>
-            <input class="form-control" name="credentials[email]" type='email' placeholder="Email">
-            <input class="form-control" name="credentials[password]" type='password' placeholder="Password">
-            <button class="btn btn-primary my-2 my-sm-0" type="submit">Sign-In</button>
+            <input name="credentials[email]" type='email' placeholder="Email">
+            <input name="credentials[password]" type='password' placeholder="Password">
+            <button class="btn btn-primary btn-sm my-2 my-sm-0" type="submit">Sign-In</button>
             </fieldset>
             </form>
             <form class='form-inline my-2 my-lg-0' id='sign-up'>
@@ -34,7 +33,7 @@
               <fieldset>
               <input name="passwords[old]" type='password' placeholder="Enter Password">
               <input name="passwords[new]" type='password' placeholder="Enter New Password">
-              <button class="btn btn-secondary my-2 my-sm-0" type="submit">Change Password</button>
+              <button class="btn btn-primary btn-sm my-2 my-sm-0" type="submit">Change Password</button>
             </fieldset>
             </form>
             <form class='form-inline my-2 my-lg-0' id='logout'>
@@ -43,7 +42,6 @@
             </nav>
             
             <nav>
-            <div class="app-name">Bad Joke Generator</div>
             <p id="message"></p>
             <div class="btn-group-vertical buttons">
             <form class="form-inline my-2 my-lg-0" id="create-joke">
