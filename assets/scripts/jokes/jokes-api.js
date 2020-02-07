@@ -16,6 +16,9 @@ const getJokes = function () {
   return $.ajax({
     url: config.apiUrl + '/jokes',
     method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
   })
 }
 
