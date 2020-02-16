@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Dad Joke Generator</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <nav class="navbar navbar-expand-lg navbar-light top-nav" style="background-color:black">
+        <a class="navbar-brand" href="#"></a>
+            <form class="form-inline my-2 my-lg-0" id="sign-in">
+            <fieldset>
+            <input name="credentials[email]" type='email' placeholder="Email">
+            <input name="credentials[password]" type='password' placeholder="Password">
+            <button class="btn btn-primary btn-sm my-2 my-sm-0" type="submit">Sign-In</button>
+            </fieldset>
+            </form>
+            <form class='form-inline my-2 my-lg-0' id='sign-up'>
+              <fieldset>
+              <input name="credentials[email]" type="email" placeholder="Email">
+              <input name="credentials[password]" type="password" placeholder="Password">
+              <input name="credentials[password_confirmation]" type="password" placeholder="Confirm Password">
+              <button class="btn btn-danger btn-sm" type="submit">Sign-Up</button>
+            </fieldset>
+            </form>
+            <form class='form-inline my-2 my-lg-0' id='change-password'>
+              <fieldset>
+              <input name="passwords[old]" type='password' placeholder="Enter Password">
+              <input name="passwords[new]" type='password' placeholder="Enter New Password">
+              <button class="btn btn-primary btn-sm my-2 my-sm-0" type="submit">Change Password</button>
+            </fieldset>
+            </form>
+            <form class='form-inline my-2 my-lg-0' id='logout'>
+              <button class="btn btn-danger btn-sm" type="submit">Logout</button>
+              </form>
+            </nav>
+            
+            <nav>
+            <p id="message"></p>
+            <div class="btn-group-vertical buttons">
+            <form class="form-inline my-2 my-lg-0" id="create-joke">
+                  <input type="text" name="joke[question]" placeholder="Question">
+                  <input type="text" name="joke[punch_line]" placeholder="Punchline">
+                <button type="submit" class="btn btn-primary btn-sm">Create Joke</button>
+              </form>
+              <form class="form-inline my-2 my-lg-0" id="show-jokes">
+                <button type="submit" class="btn btn-primary btn-sm">Show Jokes</button>
+                <button type="button" class="btn btn-danger btn-sm" id="clear">Clear Jokes</button>
+              </form>
+            </div>
+          </nav>
+
+              <p id="display"></p>
+              <main>
+                  <div id="content" class="content row">
+                  </div>
+                </main>
+
+    </body>
+</html>
+
