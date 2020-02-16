@@ -1,15 +1,15 @@
 {{#each jokes as |joke|}}
   {{log joke joke.editable}}
-  <section data-id="{{joke.id}}">
-    <div id="question">
+  <section class="col-6 col-md-4" data-id="{{joke.id}}">
+    <div class='col-12 form-content'>
     <h6>Question:</h6>
         {{joke.question}}
-    </div>
+    <!--</div>-->
     
     <h6>Punchline:</h6>
-    <div class="forms">
+    <!--<div class="forms">-->
         {{joke.punch_line}}
-    </div>
+    <!--</div>-->
   
     {{#if joke.editable}}
     <form class="form-inline my-2 my-lg-0">
@@ -38,5 +38,5 @@
 
     
   </section>
-
+  </div>
 {{/each}}
